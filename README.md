@@ -1,4 +1,4 @@
-# findfriend
+# ChatApp
 
 A new Flutter project.
 

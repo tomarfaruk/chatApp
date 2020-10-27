@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">
+		Findfriend
+	</string>
+	<!--
+	<string name="facebook_app_id">
+	699831287539304
+	</string>
+	<string name="fb_login_protocol_scheme">
+	fb699831287539304
+	</string>
+	-->
+	<string name="facebook_app_id">
+		350675289319763
+	</string>
+	<string name="fb_login_protocol_scheme">
+		fb350675289319763
+	</string>
+	<string name="default_notification_channel_id">
+		default_notification_channel_id
+	</string>
+</resources>

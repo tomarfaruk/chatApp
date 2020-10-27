@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.findfriend">
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+	<application android:name=".Application" android:label="findfirend" android:icon="@mipmap/launcher_icon">
+		<!-- for nontification style -->
+		<meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+			android:resource="@drawable/ic_stat_ac_unit" />
+		<meta-data android:name="com.google.firebase.messaging.default_notification_color"
+			android:resource="@color/colorPrimary" />
+		<activity android:name=".MainActivity" android:launchMode="singleTop"
+			android:theme="@style/LaunchTheme" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:hardwareAccelerated="true" android:windowSoftInputMode="adjustResize">
+			<meta-data android:name="io.flutter.embedding.android.NormalTheme" android:resource="@style/NormalTheme" />
+			<meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable"
+				android:resource="@drawable/launch_background" />
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<!-- for cloud messageing notification -->
+			<intent-filter>
+				<action android:name="FLUTTER_NOTIFICATION_CLICK" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<!-- cropper activity -->
+		<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait"
+			android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+		<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id"
+			android:value="@string/default_notification_channel_id" />
+		<!--
+		Don't delete the meta-data below.
+		This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+		-->
+		<!-- this is for ad mob -->
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
+			android:value="type your ads app id" />
+		<meta-data android:name="flutterEmbedding" android:value="2" />
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id" />
+		<activity android:name="com.facebook.FacebookActivity"
+			android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+			android:label="@string/app_name" />
+		<activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="@string/fb_login_protocol_scheme" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>
